@@ -1,0 +1,338 @@
+:root {
+  --main-Color: #ff9800;
+  --main-Hover-Color: #db8608;
+  --main-Active-Color: #bc7a16;
+}
+
+* {
+  box-sizing: border-box;
+  /* border: solid green 1px; */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-main {
+  background-color: var(--main-Color) !important;
+  outline: none !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.btn-main:hover {
+  background-color: var(--main-Hover-Color) !important;
+  box-shadow: 0px 4px 8px var(--main-Color);
+}
+
+.btn-main:active {
+  background-color: var(--main-Active-Color) !important;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--main-Color);
+}
+
+.transition-main {
+  transition: 0.3s;
+}
+
+.bg-main {
+  background-color: var(--main-Color);
+}
+/* Start Settings Box */
+.settings-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: white;
+  width: 200px;
+  z-index: 1000;
+  min-height: 100vh;
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+
+.settings-box.open {
+  left: 0;
+}
+
+.settings-box .settings-icon {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  background-color: white;
+  text-align: center;
+  right: -30px;
+  cursor: pointer;
+}
+
+.settings-box .settings-icon i {
+  padding: 8px 0;
+  width: 30px;
+}
+
+.settings-box .option-box {
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px;
+}
+
+.settings-box .option-box h4 {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.settings-box .option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.settings-box .option-box .colors-list li {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  border: 2px solid #eee;
+}
+
+.settings-box .option-box .colors-list li.active {
+  opacity: 1;
+  border: 2px solid white;
+}
+
+.settings-box .option-box .colors-list li:first-child {
+  background-color: #ff9800;
+}
+
+.settings-box .option-box .colors-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+
+.settings-box .option-box .colors-list li:nth-child(3) {
+  background-color: #009688;
+}
+
+.settings-box .option-box .colors-list li:nth-child(4) {
+  background-color: #03a9f4;
+}
+
+.settings-box .option-box .colors-list li:nth-child(5) {
+  background-color: #4caf50;
+}
+
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
+  width: 80px;
+  background-color: var(--main-Color);
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+  width: 50px;
+  font-size: 12px;
+  padding: 4px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.settings-box .option-box span.active {
+  opacity: 1;
+}
+
+.settings-box .reset-options {
+  background-color: #f44336;
+  border: none;
+  width: 178px;
+  margin: 10px auto;
+  display: block;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* End Settings Box */
+
+/* Start Navigation Bullets */
+.nav-bullets {
+  z-index: 10;  
+  transform: translateY(-50%);
+  width: 50px;
+}
+
+.nav-bullets .bullet {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--main-Color);
+  margin: 20px auto;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-bullets .bullet .bulit-tooltip {
+  background-color: var(--main-Color);
+  width: 120px;
+  right: 32px;
+  top: -10px;
+  cursor: default;
+  pointer-events: none;
+  scale: 0;
+}
+
+.nav-bullets .bullet .bulit-tooltip::before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent var(--main-Color);
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-bullets .bullet:hover .bulit-tooltip {
+  display: block !important;
+  scale: 1;
+}
+/* End Navigation Bullets */
+
+/* Start navbar */
+nav {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  z-index: 111;
+}
+
+nav .navbar-nav .active a {
+  color: var(--main-Color);
+  font-weight: bold;
+}
+
+.nav-seperator {
+  height: 66px;
+  z-index: -1;
+  background-color: transparent;
+}
+/* End navbar */
+
+/* Start Landing page */
+.landing .blob {
+  fill: var(--main-Color);
+}
+
+.landing .row > div:first-child div {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.landing .row > div:first-child div span {
+  color: var(--main-Color);
+}
+/* End Landing page */
+
+/* Start Projects */
+.projects .container .row > div div {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.projects .container .row > div img:hover {
+  scale: 1.05;
+}
+/* End Projects */
+
+/* Start Our Skills */
+
+.skills .skill-box {
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.skills .skill-box .skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.skills .skill-box .skill-progress {
+  height: 30px;
+  width: calc(100% - 110px);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .skills .skill-box {
+    display: block;
+  }
+
+  .skills .skill-box .skill-name {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .skills .skill-box .skill-progress {
+    width: 95%;
+  }
+}
+
+.skills .skill-box .skill-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-Color);
+  transition: all 0.5s;
+}
+/* End Our Skills */
+
+/* Start Footer */
+footer a {
+  text-decoration: none;
+}
+
+footer ul li span,
+footer ul li {
+  color: #fefefe;
+
+  font-size: 20px;
+  font-weight: 300;
+}
+footer ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+footer .row div:last-child ul li:first-child {
+  color: #fff;
+  font-weight: 700;
+}
+
+footer hr {
+  opacity: 0.6;
+  background: #fefefe;
+  border: none;
+  outline: none;
+  height: 1px;
+}
+
+footer div:last-child {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* End Footer */

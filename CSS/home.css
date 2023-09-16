@@ -1,0 +1,74 @@
+/* Start Landing page */
+.landing .blob {
+  fill: var(--main-Color);
+}
+
+.landing .row > div:first-child div {
+  font-size: var(--landing-title);
+  font-weight: bold;
+}
+
+.landing .row > div:first-child div span {
+  color: var(--main-Color);
+}
+/* End Landing page */
+
+/* Start Projects */
+.projects .container .row > div div {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.projects .container .row > div img:hover {
+  scale: 1.05;
+}
+/* End Projects */
+
+/* Start Our Skills */
+
+.skills .skill-box {
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.skills .skill-box .skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.skills .skill-box .skill-progress {
+  height: 30px;
+  width: calc(100% - 110px);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .skills .skill-box {
+    display: block;
+  }
+
+  .skills .skill-box .skill-name {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .skills .skill-box .skill-progress {
+    width: 95%;
+  }
+}
+
+.skills .skill-box .skill-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-Color);
+  transition: all 0.5s;
+}
+/* End Our Skills */

@@ -44,12 +44,26 @@ function HandleActiveClass(e) {
 const colorsLi = document.querySelectorAll(".colors-list li");
 colorsLi.forEach((li) => {
   li.addEventListener("click", (e) => {
-    const color = e.target.dataset.local;
-    // Set color on root
-    document.documentElement.style.setProperty("--main-Color", color);
-    // Set color on local storage
-    localStorage.setItem("color_option", color);
+    const mainColor = e.target.dataset.maincolor;
+    const mainHoverColor = e.target.dataset.mainhovercolor;
+    const mainActiveColor = e.target.dataset.mainactivecolor;
 
+    console.log(e.target.dataset);
+    console.log(mainColor);
+    console.log(mainHoverColor);
+    console.log(mainActiveColor);
+
+    document.documentElement.style.setProperty("--main-Color", mainColor);
+    document.documentElement.style.setProperty(
+      "--main-Hover-Color",
+      mainHoverColor
+    );
+    document.documentElement.style.setProperty(
+      "--main-Active-Color",
+      mainActiveColor
+    );
+
+    localStorage.setItem("color_option", mainColor);
     HandleActiveClass(e);
   });
 });
@@ -101,11 +115,6 @@ function MakeSmoothNavigation(itemsArr) {
 const allBullets = document.querySelectorAll(".nav-bullets .bullet");
 // Make Naviggation on billets
 MakeSmoothNavigation(allBullets);
-
-// Select All Links
-const allLinks = document.querySelectorAll(".nav-link");
-// Make Naviggation on billets
-MakeSmoothNavigation(allLinks);
 
 let bulletSpan = document.querySelectorAll(".bullets-option span");
 function ChangeBulletsShowOption(option, bulletsContainer) {

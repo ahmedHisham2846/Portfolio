@@ -1,0 +1,31 @@
+* {
+  /* border: green solid 1px; */
+}
+.who-am-i .row > div:first-child div {
+  font-size: var(--landing-title);
+  font-weight: bold;
+}
+
+.who-am-i .row > div:first-child div span {
+  color: var(--main-Color);
+}
+
+.who-am-i .row > div:nth-child(2) {
+  color: #656565;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.education .row div,
+.my-story .row div {
+  color: #020202;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.education .row div:first-child,
+.education .row div:nth-child(2) {
+  color: #656565;
+  font-size: 24px;
+  font-weight: 500;
+}

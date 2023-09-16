@@ -2,7 +2,7 @@
   /* border: green solid 1px; */
 }
 .who-am-i .row > div:first-child div {
-  font-size: var(--landing-title);
+  font-size: 3.5rem;
   font-weight: bold;
 }
 

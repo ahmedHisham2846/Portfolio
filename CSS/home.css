@@ -4,7 +4,7 @@
 }
 
 .landing .row > div:first-child div {
-  font-size: var(--landing-title);
+  font-size: 3.5rem;
   font-weight: bold;
 }
 
